@@ -1,0 +1,475 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hiii Halima 💗</title>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Trebuchet MS", sans-serif;
+  background: linear-gradient(135deg, #ffe4ef, #f4e4ff, #fff0f5);
+  color: #904768;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.page {
+  display: none;
+  min-height: 100vh;
+  padding: 35px 20px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.page.active {
+  display: flex;
+  animation: appear 0.7s ease;
+}
+
+.content {
+  width: 100%;
+  max-width: 550px;
+  margin: auto;
+}
+
+h1 {
+  color: #e75480;
+  font-size: clamp(2.3rem, 8vw, 3.6rem);
+  margin: 20px 0;
+}
+
+h2 {
+  color: #d94f87;
+  margin-bottom: 18px;
+}
+
+p {
+  font-size: 1.05rem;
+  line-height: 1.9;
+  margin-bottom: 16px;
+}
+
+.sticker {
+  font-size: 65px;
+  margin-bottom: 12px;
+  animation: heartbeat 1.5s infinite;
+}
+
+.card {
+  background: #ffffffc9;
+  border: 2px solid white;
+  border-radius: 25px;
+  padding: 28px 23px;
+  margin: 20px 0;
+  box-shadow: 0 8px 25px #d77ca52b;
+}
+
+button {
+  border: none;
+  border-radius: 30px;
+  padding: 14px 22px;
+  margin: 8px 4px;
+  background: #f477a5;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 5px 12px #e7548030;
+  transition: 0.25s;
+}
+
+button:hover {
+  background: #df4f87;
+  transform: translateY(-3px);
+}
+
+.choice {
+  display: block;
+  width: 100%;
+  padding: 20px;
+  background: #fff;
+  color: #c34f81;
+  border: 2px solid #ffc5dc;
+  font-size: 1.05rem;
+}
+
+.small {
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+.heart {
+  position: fixed;
+  bottom: -40px;
+  z-index: -1;
+  pointer-events: none;
+  animation: float 7s linear forwards;
+}
+
+@keyframes heartbeat {
+  50% { transform: scale(1.12); }
+}
+
+@keyframes appear {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes float {
+  to {
+    transform: translateY(-110vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- PAGE 1: WELCOME -->
+
+<section class="page active" id="home">
+  <div class="content">
+    <div class="sticker">🎀💗🧸</div>
+
+    <p>psssttt... someone special is here 👀</p>
+
+    <h1>Hiii Halimaaa! 💕</h1>
+
+    <div class="card">
+      <p>
+        Babyyy, I made a little something
+        just for youuu 🥹💗
+      </p>
+      <p>
+        So take a deep breath, get comfy,
+        and click your way through this
+        little surprise from me to you. 🌷
+      </p>
+      <p>Ready, bestie? 🫶🏻</p>
+    </div>
+
+    <button onclick="goTo('choices')">
+      Open this, bestie 💌 →
+    </button>
+  </div>
+</section>
+
+
+<!-- PAGE 2: TWO CHOICES -->
+
+<section class="page" id="choices">
+  <div class="content">
+    <div class="sticker">💌✨</div>
+
+    <h1>Okayyy bestie! 💗</h1>
+
+    <p>
+      I have two little things for you.
+      Which one do you wanna open first? 🥹
+    </p>
+
+    <button class="choice" onclick="goTo('gift')">
+      🎁 There's something for you!
+    </button>
+
+    <button class="choice" onclick="goTo('letter')">
+      💌 A letter from me to you
+    </button>
+
+    <p class="small">Choose whichever your heart says! 🎀</p>
+  </div>
+</section>
+
+
+<!-- PAGE 3: THE GIFT -->
+
+<section class="page" id="gift">
+  <div class="content">
+    <div class="sticker">🎁🦋💝</div>
+
+    <h1>A little gift for you!</h1>
+
+    <div class="card">
+      <h2>Dear Halima 🌷</h2>
+
+      <p>
+        If I could gift you one thing in this whole
+        world, it would be the ability to see yourself
+        through my eyes. 🥹
+      </p>
+
+      <p>
+        Then you'd understand how precious you are,
+        how much your presence means to me, and
+        why having you as my best friend is one of
+        the sweetest things ever. 💗
+      </p>
+
+      <p>
+        No expensive gift could ever replace
+        the memories and happiness you've given me.
+      </p>
+
+      <p>You're my little forever person! 🫂💕</p>
+    </div>
+
+    <button onclick="goTo('memories')">
+      Let's remember our school days 🏫 →
+    </button>
+
+    <button onclick="goTo('choices')">
+      ← Go back
+    </button>
+  </div>
+</section>
+
+
+<!-- PAGE 4: THE LETTER -->
+
+<section class="page" id="letter">
+  <div class="content">
+    <div class="sticker">💌🥹</div>
+
+    <h1>A letter for you</h1>
+
+    <div class="card">
+      <h2>My dearest Halima, 💗</h2>
+
+      <p>
+        I don't even know where to start, because
+        there's so much I wish I could tell you.
+      </p>
+
+      <p>
+        I miss you, bestie. I miss talking to you,
+        laughing with you, sharing random things
+        with you, and having you around.
+      </p>
+
+      <p>
+        Sometimes I wish I could go back in time
+        just for one day and relive our school days
+        with you all over again. 🥹
+      </p>
+
+      <p>
+        I never knew that ordinary school days
+        would become such special memories.
+        The little moments that felt so normal back
+        then are the moments I treasure now.
+      </p>
+
+      <p>
+        No matter how much life changes, I hope
+        you always remember that you have someone
+        who is genuinely grateful to have you.
+      </p>
+
+      <p>
+        I miss you more than these words can explain.
+        If I could, I'd give you the biggest hug right now.
+        🫂💗
+      </p>
+
+      <p>
+        Love you always, my bestie. ♾️
+      </p>
+
+      <p><b>Forever your best friend, 💋</b></p>
+    </div>
+
+    <button onclick="goTo('memories')">
+      Remember our memories 🏫 →
+    </button>
+
+    <button onclick="goTo('choices')">
+      ← Go back
+    </button>
+  </div>
+</section>
+
+
+<!-- PAGE 5: SCHOOL MEMORIES -->
+
+<section class="page" id="memories">
+  <div class="content">
+    <div class="sticker">🏫🎀🥹</div>
+
+    <h1>Our school days...</h1>
+
+    <div class="card">
+      <h2>Remember, Halima? 💗</h2>
+
+      <p>
+        Remember when we used to go to school
+        and had absolutely no idea that one day
+        we'd miss those days this much? 🥹
+      </p>
+
+      <p>
+        The laughing over the smallest things,
+        the silly jokes that nobody else understood,
+        the random conversations, the little secrets...
+      </p>
+
+      <p>
+        Just sitting together and laughing until
+        our stomachs hurt. 😭😂
+      </p>
+
+      <p>
+        Those days weren't perfect, but they were
+        ours. And having you beside me made even
+        the most ordinary days feel special. 🌷
+      </p>
+
+      <p>
+        If someone gave me a chance to go back
+        to one moment in school, I think I'd choose
+        a random day with you.
+      </p>
+
+      <p>
+        Not because anything extraordinary happened,
+        but because I was happy and didn't even
+        realise how precious those moments were.
+        💌
+      </p>
+
+      <p>
+        We were just two besties laughing our way
+        through school... and now those memories
+        live rent-free in my heart. 🫶🏻
+      </p>
+    </div>
+
+    <button onclick="goTo('ending')">
+      One last thing, bestie... 💗 →
+    </button>
+
+    <button onclick="goTo('choices')">
+      ← Read the letter again
+    </button>
+  </div>
+</section>
+
+
+<!-- PAGE 6: THE ENDING -->
+
+<section class="page" id="ending">
+  <div class="content">
+    <div class="sticker">🫂💗♾️</div>
+
+    <h1>One last thing...</h1>
+
+    <div class="card">
+      <p>
+        Halima, if you're smiling right now,
+        just know that I wish I could be there
+        to see it. 🥹💕
+      </p>
+
+      <p>
+        I don't know what the future holds for us,
+        how busy life will get, or how much things
+        will change.
+      </p>
+
+      <p>
+        But I hope we never become strangers
+        who only remember each other as
+        someone from school.
+      </p>
+
+      <p>
+        I want us to keep making memories,
+        keep laughing at our stupid jokes,
+        and keep being there for each other.
+      </p>
+
+      <p>
+        I miss our school days.
+        I miss our laughter.
+        And most of all, I miss YOU. 💗
+      </p>
+
+      <h2>You're my forever bestie, Halima! 🎀</h2>
+
+      <p>Made with all my love, just for you. 💌</p>
+    </div>
+
+    <button onclick="celebrate()">
+      Send me a virtual hug! 🫂
+    </button>
+
+    <p id="hug" style="display:none;">
+      BIGGEST HUG EVER!!! 🫂💗🌷🎀✨
+    </p>
+
+    <button onclick="goTo('home')">
+      Start our little story again ↺
+    </button>
+  </div>
+</section>
+
+
+<script>
+function goTo(pageId) {
+  document.querySelectorAll(".page").forEach(page => {
+    page.classList.remove("active");
+  });
+
+  document.getElementById(pageId).classList.add("active");
+
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+
+  createHearts(5);
+}
+
+function createHearts(amount) {
+  const emojis = ["💗", "💕", "💖", "🌸", "✨", "🎀"];
+
+  for (let i = 0; i < amount; i++) {
+    const heart = document.createElement("div");
+
+    heart.className = "heart";
+    heart.textContent =
+      emojis[Math.floor(Math.random() * emojis.length)];
+
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.fontSize =
+      (18 + Math.random() * 20) + "px";
+
+    heart.style.animationDuration =
+      (4 + Math.random() * 4) + "s";
+
+    document.body.appendChild(heart);
+
+    setTimeout(() => heart.remove(), 8000);
+  }
+}
+
+function celebrate() {
+  document.getElementById("hug").style.display = "block";
+  createHearts(30);
+}
+
+// A few hearts float in the background.
+setInterval(() => createHearts(1), 1300);
+</script>
+
+</body>
+</html>
